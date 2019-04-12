@@ -1,5 +1,7 @@
-#include "include/image_qt.h"
+#include "image.h"
+#include "image_qt.h"
 
+CV_SDK_API_
 QImage img_rgb_to_QImage(struct img_rgb_t *img_rgb)
 {
     int h,w;

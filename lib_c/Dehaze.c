@@ -1,5 +1,6 @@
-#include "include/image.h"
+#include "image.h"
 
+CV_SDK_API_
 struct img_rgb_t *Dehaze
 (
     struct img_rgb_t *in,

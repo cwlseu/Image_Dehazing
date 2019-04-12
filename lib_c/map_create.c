@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 struct map_t *map_create(int wt,int ht,double init)
 {

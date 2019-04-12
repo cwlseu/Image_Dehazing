@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 struct map_rgb_t *map_rgb_create(int wt,int ht,double init)
 {

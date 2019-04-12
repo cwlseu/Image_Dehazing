@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 struct arry_pix_t *arry_pix_create(unsigned long num_of_pixs)
 {

@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 double **Malloc2D_dbl(int wt,int ht,double init)
 {

@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 struct img_yuv_t *img_yuv_create(int wt,int ht,unsigned char init)
 {

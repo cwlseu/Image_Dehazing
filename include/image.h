@@ -10,6 +10,26 @@
 #define MAX(x,y) ((x)<=(y)? (y):(x))
 #define MIN(x,y) ((x)<=(y)? (x):(y))
 
+#ifdef _MSC_VER
+#ifdef SDK_EXPORTS
+#define CV_SDK_API_ __declspec(dllexport)
+#else
+#define CV_SDK_API_
+#endif
+#else /* _MSC_VER */
+#ifdef SDK_EXPORTS
+#define CV_SDK_API_ __attribute__((visibility("default")))
+#else
+#define CV_SDK_API_
+#endif
+#endif
+
+#ifdef __cplusplus
+#define CV_SDK_API extern "C" CV_SDK_API_
+#else
+#define CV_SDK_API CV_SDK_API_
+#endif
+
 struct pix_t
 {
     int w;
@@ -86,18 +106,19 @@ struct clr_t
 extern "C" {
 #endif
 
+CV_SDK_API_
 struct arry_pix_t *
 arry_pix_create
 (
     unsigned long num_of_pixs
 );
-
+CV_SDK_API_
 void
 arry_pix_destruct
 (
     struct arry_pix_t *arry_pix
 );
-
+CV_SDK_API_
 unsigned char **
 Malloc2D_uchr
 (
@@ -105,7 +126,7 @@ Malloc2D_uchr
     int ht,
     unsigned char init
 );
-
+CV_SDK_API_
 double **
 Malloc2D_dbl
 (
@@ -113,7 +134,7 @@ Malloc2D_dbl
     int ht,
     double init
 );
-
+CV_SDK_API_
 struct img_t *
 img_create
 (
@@ -121,13 +142,14 @@ img_create
     int ht,
     unsigned char init
 );
-
+CV_SDK_API_
 void
 img_destruct
 (
     struct img_t *img
 );
 
+CV_SDK_API_
 struct img_rgb_t *
 img_rgb_create
 (
@@ -136,12 +158,13 @@ img_rgb_create
     unsigned char init
 );
 
+CV_SDK_API_
 void
 img_rgb_destruct
 (
     struct img_rgb_t *img
 );
-
+CV_SDK_API_
 struct img_yuv_t *
 img_yuv_create
 (
@@ -149,13 +172,13 @@ img_yuv_create
     int ht,
     unsigned char init
 );
-
+CV_SDK_API_
 void
 img_yuv_destruct
 (
     struct img_yuv_t *img
 );
-
+CV_SDK_API_
 struct map_t *
 map_create
 (
@@ -163,13 +186,13 @@ map_create
     int ht,
     double init
 );
-
+CV_SDK_API_
 void
 map_destruct
 (
     struct map_t *map
 );
-
+CV_SDK_API_
 struct map_rgb_t *
 map_rgb_create
 (
@@ -177,25 +200,25 @@ map_rgb_create
     int ht,
     double init
 );
-
+CV_SDK_API_
 void
 map_rgb_destruct
 (
     struct map_rgb_t *map
 );
-
+CV_SDK_API_
 struct map_rgb_t *
 img_to_map_rgb
 (
     struct img_rgb_t *in
 );
-
+CV_SDK_API_
 struct img_rgb_t *
 map_to_img_rgb
 (
     struct map_rgb_t *map
 );
-
+CV_SDK_API_
 struct img_yuv_t *
 img_rgb_to_yuv
 (
@@ -203,7 +226,7 @@ img_rgb_to_yuv
 );
 
 // dehaze
-
+CV_SDK_API_
 struct img_rgb_t *
 Dehaze
 (

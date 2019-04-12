@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 struct img_t *img_create(int wt,int ht,unsigned char init)
 {

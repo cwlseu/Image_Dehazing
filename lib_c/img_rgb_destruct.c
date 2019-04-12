@@ -1,5 +1,6 @@
-#include "include/image.h"
+#include "image.h"
 
+CV_SDK_API_
 void img_rgb_destruct(struct img_rgb_t *img)
 {
     free(img->r[0]); free(img->r);

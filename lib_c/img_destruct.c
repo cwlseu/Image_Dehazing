@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 void img_destruct(struct img_t *img)
 {

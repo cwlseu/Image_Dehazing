@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 struct img_yuv_t *img_rgb_to_yuv(struct img_rgb_t *img_rgb)
 {

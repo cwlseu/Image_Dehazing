@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 void map_rgb_destruct(struct map_rgb_t *map)
 {

@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 void img_yuv_destruct(struct img_yuv_t *img)
 {

@@ -1,4 +1,4 @@
-#include "include/image.h"
+#include "image.h"
 
 unsigned char **Malloc2D_uchr(int wt,int ht,unsigned char init)
 {

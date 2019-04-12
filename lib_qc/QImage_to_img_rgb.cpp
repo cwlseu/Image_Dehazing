@@ -1,7 +1,7 @@
-#include "include/image_qt.h"
+#include "image.h"
+#include "image_qt.h"
 
-struct img_rgb_t *QImage_to_img_rgb(QImage *inImg)
-{
+struct img_rgb_t *QImage_to_img_rgb(QImage *inImg) {
     int h,w;
     struct img_rgb_t *out;
     QColor color;
